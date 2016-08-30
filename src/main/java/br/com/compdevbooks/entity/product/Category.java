@@ -1,6 +1,8 @@
 package br.com.compdevbooks.entity.product;
 
-public class Category{
+import br.com.compdevbooks.entity.AEntity;
+
+public class Category extends AEntity {
     
     private String name;
     private String description;

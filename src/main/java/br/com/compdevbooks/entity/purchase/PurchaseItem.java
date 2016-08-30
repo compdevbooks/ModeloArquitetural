@@ -1,7 +1,8 @@
 package br.com.compdevbooks.entity.purchase;
 
-import br.com.compdevbooks.model.product.LotStock;
-import br.com.compdevbooks.model.product.Product;
+import br.com.compdevbooks.entity.AEntity;
+import br.com.compdevbooks.entity.product.LotStock;
+import br.com.compdevbooks.entity.product.Product;
 
 import java.util.Set;
 

@@ -1,6 +1,8 @@
 package br.com.compdevbooks.entity.address;
 
-public class City {
+import br.com.compdevbooks.entity.AEntity;
+
+public class City extends AEntity {
 
     private String name;
     private State state;

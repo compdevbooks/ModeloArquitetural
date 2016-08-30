@@ -1,6 +1,8 @@
 package br.com.compdevbooks.entity.address;
 
-public class State{
+import br.com.compdevbooks.entity.AEntity;
+
+public class State extends AEntity {
 
     private String acronym;
     private String name;

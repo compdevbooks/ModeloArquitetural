@@ -1,7 +1,8 @@
 package br.com.compdevbooks.entity.person;
 
+import br.com.compdevbooks.entity.address.City;
+
 import java.util.Set;
-import br.com.compdevbooks.model.address.City;
 
 public class Seller extends NaturalPerson {
 

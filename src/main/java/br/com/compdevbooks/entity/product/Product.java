@@ -1,9 +1,9 @@
 package br.com.compdevbooks.entity.product;
 
-import br.com.compdevbooks.model.person.Manufacturer;
-import java.util.Set;
+import br.com.compdevbooks.entity.AEntity;
+import br.com.compdevbooks.entity.person.Manufacturer;
 
-public class Product{
+public class Product extends AEntity {
 
     private String name;
     private String description;

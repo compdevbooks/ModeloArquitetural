@@ -1,6 +1,6 @@
 package br.com.compdevbooks.entity.sale;
 
-import br.com.compdevbooks.model.payment.InstallmentPayment;
+import br.com.compdevbooks.entity.payment.InstallmentPayment;
 
 import java.util.Date;
 
