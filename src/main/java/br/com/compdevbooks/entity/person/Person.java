@@ -13,5 +13,28 @@ public abstract class Person extends AEntity {
     protected String nationalRegister;
     protected Address address;
     private Set<Phone> phones;
-    
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getNationalRegister() {
+        return nationalRegister;
+    }
+
+    public void setNationalRegister(String nationalRegister) {
+        this.nationalRegister = nationalRegister;
+    }
+
+    public Set<Phone> getPhones() {
+        return phones;
+    }
+
+    public void setPhones(Set<Phone> phones) {
+        this.phones = phones;
+    }
 }
