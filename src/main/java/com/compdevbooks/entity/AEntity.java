@@ -24,10 +24,4 @@ public abstract class AEntity implements IEntity {
         return getId().equals(aEntity.getId());
 
     }
-
-    @Override
-    public int hashCode() {
-        return getId().hashCode();
-    }
-
 }
