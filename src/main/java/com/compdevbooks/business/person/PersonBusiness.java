@@ -4,7 +4,7 @@ import com.compdevbooks.business.ABusiness;
 import com.compdevbooks.dao.IDAO;
 import com.compdevbooks.entity.IEntity;
 import com.compdevbooks.entity.person.Person;
-import com.compdevbooks.util.Messagesi18N;
+import com.compdevbooks.util.RegularExpressions;
 import com.compdevbooks.util.RegularExpressionsEnum;
 
 public abstract class PersonBusiness extends ABusiness {
@@ -40,7 +40,7 @@ public abstract class PersonBusiness extends ABusiness {
 
         //OU
         try {
-            System.out.println(Messagesi18N.validate("NAME","123ads"));
+            System.out.println(RegularExpressions.validate("NAME","123ads"));
         } catch (Exception e) {
             e.printStackTrace();
         }

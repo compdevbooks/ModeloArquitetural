@@ -3,7 +3,7 @@ package com.compdevbooks.util;
 import java.util.HashMap;
 import java.util.ResourceBundle;
 
-public class Messagesi18N {
+public class RegularExpressions {
 
     private final static HashMap<String,String> expressions = new HashMap<>();
     private static ResourceBundle bundle;
