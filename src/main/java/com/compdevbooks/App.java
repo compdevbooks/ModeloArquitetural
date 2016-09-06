@@ -10,9 +10,10 @@ public class App
 {
     public static void main( String[] args )
     {
-        DAOFactory daoFactory = DAOFactory.getDAOFactory(DAOFactoryEnum.MEMORY);
+//        DAOFactory daoFactory = DAOFactory.getDAOFactory(DAOFactoryEnum.MEMORY);
 
-        FooBusiness fooBusiness = new FooBusiness(new FooDAO());
+        FooDAO dao = new FooDAO();
+        FooBusiness fooBusiness = new FooBusiness(dao);
 
         FooEntity fooEntity = new FooEntity();
         fooEntity.setId(1L);

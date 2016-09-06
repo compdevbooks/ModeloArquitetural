@@ -6,22 +6,22 @@ import java.util.Set;
 
 public class Seller extends NaturalPerson {
 
-    private Set<City> cityList;
-    private Set<Client> clientList;
+    private Set<City> cities;
+    private Set<Client> clients;
 
-    public Set<City> getCityList() {
-        return cityList;
+    public Set<City> getCities() {
+        return cities;
     }
 
-    public void setCityList(Set<City> cityList) {
-        this.cityList = cityList;
+    public void setCities(Set<City> cities) {
+        this.cities = cities;
     }
 
-    public Set<Client> getClientList() {
-        return clientList;
+    public Set<Client> getClients() {
+        return clients;
     }
 
-    public void setClientList(Set<Client> clientList) {
-        this.clientList = clientList;
+    public void setClientList(Set<Client> clients) {
+        this.clients = clients;
     }
 }
