@@ -9,7 +9,6 @@ public class Address {
     private City city;
     private GPSCoordinate gpsCoordinate;
 
-
     public String getStreet() {
         return street;
     }

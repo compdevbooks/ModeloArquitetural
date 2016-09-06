@@ -16,7 +16,7 @@ public enum RegularExpressionsEnum {
         regExp = exp;
         errorMsg = "Unable to load. RegularExpressionsEnum.properties file must be in the same directory as the RegularExpressionsEnum.class";
         try {
-            ResourceBundle bundle = ResourceBundle.getBundle("RegularExpressionsEnum");
+            ResourceBundle bundle = ResourceBundle.getBundle("RegularExpressions");
             errorMsg = bundle.getString(msg);
         } catch(Exception e) {
 //            e.printStackTrace();

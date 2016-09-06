@@ -3,6 +3,10 @@ package com.compdevbooks.util;
 import java.util.HashMap;
 import java.util.ResourceBundle;
 
+/**
+ * An utility class that apply regular expressions to validate several values.
+ * This class also access a file named RegularExpressions.properties to obtain internationalized error messages according to the applied regular expression.
+ */
 public class RegularExpressions {
 
     private final static HashMap<String,String> expressions = new HashMap<>();
@@ -13,7 +17,7 @@ public class RegularExpressions {
         expressions.put("NATIONAL_REGISTER","\\w+");
         expressions.put("TITLE","");
         try {
-            bundle = ResourceBundle.getBundle("RegularExpressionsEnum");
+            bundle = ResourceBundle.getBundle("RegularExpressions");
         } catch(Exception e) {
             //e.printStackTrace();
         }

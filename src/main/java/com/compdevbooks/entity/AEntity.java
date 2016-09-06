@@ -1,6 +1,9 @@
 package com.compdevbooks.entity;
 
-
+/**
+ * Every entity class can inherit from this one in order to have a default implementation for IEntity interface.
+ * A default implementation of id attribute and equals operation is provided.
+ */
 public abstract class AEntity implements IEntity {
 
     protected Long id;
@@ -15,13 +18,12 @@ public abstract class AEntity implements IEntity {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof AEntity)) return false;
+    public boolean equals(IEntity entity) {
+        if (this == entity) return true;
+        if (!(entity instanceof AEntity)) return false;
 
-        AEntity aEntity = (AEntity) o;
+        AEntity aEntity = (AEntity) entity;
 
         return getId().equals(aEntity.getId());
-
     }
 }
