@@ -7,7 +7,7 @@ import com.compdevbooks.entity.address.Phone;
 import java.util.Set;
 
 public abstract class Person extends AEntity {
-	//companyName for LegalPerson
+	//companyName for LegalPersonDAO
     protected String name;
     //Social Security Number CPF or Registration of Corporate Taxpayers CNPJ
     protected String nationalRegister;

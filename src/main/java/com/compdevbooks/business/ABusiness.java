@@ -3,6 +3,8 @@ package com.compdevbooks.business;
 import com.compdevbooks.dao.IDAO;
 import com.compdevbooks.entity.IEntity;
 
+import java.util.Collection;
+
 public abstract class ABusiness implements IBusiness {
 
 	public IDAO dao;
@@ -32,6 +34,11 @@ public abstract class ABusiness implements IBusiness {
 	@Override
 	public IEntity getById(Long id) {
 		return dao.getById(id);
+	}
+
+	@Override
+	public Collection<IEntity> getAll() {
+		return dao.getAll();
 	}
 	
 }

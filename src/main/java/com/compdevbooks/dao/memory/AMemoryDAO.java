@@ -1,9 +1,10 @@
-package com.compdevbooks.dao.memory.person;
+package com.compdevbooks.dao.memory;
 
 import com.compdevbooks.dao.IDAO;
 import com.compdevbooks.entity.IEntity;
 
 import java.util.ArrayList;
+import java.util.Collection;
 
 public abstract class AMemoryDAO<ENTITY extends IEntity> implements IDAO<ENTITY> {
     protected final ArrayList<ENTITY> database = new ArrayList<>();
@@ -25,5 +26,10 @@ public abstract class AMemoryDAO<ENTITY extends IEntity> implements IDAO<ENTITY>
             if (ent.getId().equals(id))
                 return ent;
         return null;
+    }
+
+    @Override
+    public Collection<ENTITY> getAll() {
+        return database;
     }
 }

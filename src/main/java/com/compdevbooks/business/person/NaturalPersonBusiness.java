@@ -3,6 +3,7 @@ package com.compdevbooks.business.person;
 import com.compdevbooks.dao.IDAO;
 import com.compdevbooks.entity.IEntity;
 import com.compdevbooks.entity.person.NaturalPerson;
+import com.compdevbooks.util.RegularExpressions;
 import com.compdevbooks.util.RegularExpressionsEnum;
 
 public class NaturalPersonBusiness extends PersonBusiness {
@@ -17,8 +18,12 @@ public class NaturalPersonBusiness extends PersonBusiness {
         StringBuilder str = new StringBuilder();
         NaturalPerson person = (NaturalPerson) entity;
 
-        if (!person.getTitle().matches(RegularExpressionsEnum.TITLE.getRegExp()))
-            str.append(RegularExpressionsEnum.TITLE.getErrorMsg());
+        try {
+            String msg = RegularExpressions.validate("TITLE",person.getTitle());
+            str.append(msg==null?"":msg);
+        } catch (Exception e1) {
+            e1.printStackTrace();
+        }
 
         if (e!=null || str.length()>0) {
             if (e==null)

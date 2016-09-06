@@ -3,6 +3,7 @@ package com.compdevbooks.business.person;
 import com.compdevbooks.business.ABusiness;
 import com.compdevbooks.dao.IDAO;
 import com.compdevbooks.entity.IEntity;
+import com.compdevbooks.entity.address.Phone;
 import com.compdevbooks.entity.person.Person;
 import com.compdevbooks.util.RegularExpressions;
 import com.compdevbooks.util.RegularExpressionsEnum;
@@ -21,11 +22,18 @@ public abstract class PersonBusiness extends ABusiness {
         if (!person.getName().matches(RegularExpressionsEnum.NAME.getRegExp()))
             str.append(RegularExpressionsEnum.NAME.getErrorMsg());
 
-        if (person.getPhones()==null || person.getPhones().size()==0)
-            str.append(RegularExpressionsEnum.PHONE.getErrorMsg());
-
-        if (!person.getNationalRegister().matches(RegularExpressionsEnum.NATIONAL_REGISTER.getRegExp()))
-            str.append(RegularExpressionsEnum.NATIONAL_REGISTER.getErrorMsg());
+        try {
+            String msg = RegularExpressions.validate("NAME",person.getName());
+            str.append(msg==null?"":msg);
+            for (Phone phone : person.getPhones()) {
+                msg = RegularExpressions.validate("PHONE", phone.toString());
+                str.append(msg == null ? "" : msg);
+            }
+            msg = RegularExpressions.validate("NATIONAL_REGISTER",person.getNationalRegister());
+            str.append(msg==null?"":msg);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         if (str.length()>0)
             return new Exception(str.toString());

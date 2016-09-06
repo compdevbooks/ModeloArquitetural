@@ -5,6 +5,7 @@ import com.compdevbooks.entity.FooEntity;
 import com.compdevbooks.entity.IEntity;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 public class FooDAO implements IDAO {
@@ -27,5 +28,10 @@ public class FooDAO implements IDAO {
                 return i;
 
         return null;
+    }
+
+    @Override
+    public Collection getAll() {
+        return fooList;
     }
 }
