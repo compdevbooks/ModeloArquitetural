@@ -16,6 +16,7 @@ public class RegularExpressions {
         expressions.put("PHONE","([0-9]{2,3} [0-9]{3,5}-[0-9]{4}");
         expressions.put("NATIONAL_REGISTER","\\w+");
         expressions.put("TITLE","");
+        expressions.put("COMISSION_PERCENTAGE","[0-9]+");
         try {
             bundle = ResourceBundle.getBundle("RegularExpressions");
         } catch(Exception e) {
