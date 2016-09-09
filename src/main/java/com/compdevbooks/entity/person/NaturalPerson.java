@@ -1,6 +1,6 @@
 package com.compdevbooks.entity.person;
 
-public class NaturalPerson extends Person {
+public abstract class NaturalPerson extends Person {
 	 private String title;
      private String driveLicense; //rg
 
