@@ -6,6 +6,7 @@ import com.compdevbooks.entity.product.Product;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 
 public class LotStockDAO extends AMemoryDAO<LotStock> {
@@ -34,7 +35,7 @@ public class LotStockDAO extends AMemoryDAO<LotStock> {
         return lots;
     }
 
-    public List<LotStock> getByAmount(int amount) {
+    public List<LotStock> getByAmountLessThan(int amount) {
         ArrayList<LotStock> lots = new ArrayList<>();
         for (LotStock l : database)
             if (l.getAmount() <= amount)
@@ -42,4 +43,11 @@ public class LotStockDAO extends AMemoryDAO<LotStock> {
         return lots;
     }
 
+    public HashMap<Product,List<LotStock>> getByProductAmountLessThan(int amount) {
+        HashMap<Product, List<LotStock>> products = new HashMap<>();
+
+
+
+        return products;
+    }
 }

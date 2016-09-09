@@ -4,9 +4,11 @@ import com.compdevbooks.business.ABusiness;
 import com.compdevbooks.dao.IDAO;
 import com.compdevbooks.entity.IEntity;
 import com.compdevbooks.entity.product.LotStock;
+import com.compdevbooks.entity.product.Product;
 import com.compdevbooks.util.RegularExpressions;
 
 import java.util.Date;
+import java.util.HashMap;
 
 public class LotStockBusiness extends ABusiness {
     
@@ -32,4 +34,5 @@ public class LotStockBusiness extends ABusiness {
 
         return null;
     }
+
 }
