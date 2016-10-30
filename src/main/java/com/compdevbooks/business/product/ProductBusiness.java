@@ -2,9 +2,13 @@ package com.compdevbooks.business.product;
 
 import com.compdevbooks.business.ABusiness;
 import com.compdevbooks.dao.IDAO;
+import com.compdevbooks.dao.memory.product.LotStockDAO;
 import com.compdevbooks.entity.IEntity;
 import com.compdevbooks.entity.product.Product;
 import com.compdevbooks.util.RegularExpressions;
+
+import java.util.Collection;
+import java.util.List;
 
 public class ProductBusiness extends ABusiness {
 
@@ -43,6 +47,13 @@ public class ProductBusiness extends ABusiness {
         if (str.length()>0)
             return new Exception(str.toString());
 
+        return null;
+    }
+
+    public List<Product> getByCriticalStock() {
+        //procurar por produtos cujo estoque esteja abaixo do minimumStock de produto
+        LotStockDAO lsDAO = new LotStockDAO();
+        lsDAO.getAll();
         return null;
     }
 }
